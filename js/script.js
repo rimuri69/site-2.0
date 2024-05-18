@@ -14,7 +14,7 @@ function submitLogin() {
     xhr.open("POST", "server/authenticate.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
             if (response.success) {
                 alert("Login successful! Your unique key is: " + response.key);
@@ -29,3 +29,4 @@ function submitLogin() {
 
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
