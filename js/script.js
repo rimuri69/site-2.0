@@ -30,3 +30,10 @@ function submitLogin() {
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
+function openVouches() {
+    document.getElementById('vouchesWindow').style.display = 'block';
+}
+
+function closeVouches() {
+    document.getElementById('vouchesWindow').style.display = 'none';
+}
