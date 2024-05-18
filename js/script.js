@@ -17,16 +17,11 @@ function submitLogin() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             const response = JSON.parse(xhr.responseText);
             if (response.success) {
-                alert("Login successful! Your unique key is: " + response.key);
-                closeLoginForm();
+                window.location.href = "https://example.com/success?key=" + response.key;  // Change this URL to the desired destination
             } else {
                 alert("Login failed: " + response.message);
             }
         }
     };
     xhr.send("username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
-}
-
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
