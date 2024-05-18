@@ -197,6 +197,10 @@ button {
     width: 100%;
     border-radius: 5px;
 }
+.header-logo {
+    height: 60px; /* Adjust the height as needed */
+    width: 60px; /* Adjust the width as needed */
+}
 
 button:hover {
     background-color: #BB86FC;
