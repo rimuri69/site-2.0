@@ -3,24 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny DeVito Fan Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sillys</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Danny DeVito Fan Page</h1>
+        <h1>Sillys</h1>
     </header>
-    <div class="content">
-        <div class="background"></div>
-        <div class="text">
-            <p>
-                Danny DeVito is not just an actor; he's a legend. From his iconic roles in movies like Matilda, Twins, and Batman Returns to his memorable stint on TV in It's Always Sunny in Philadelphia, DeVito has captured the hearts of audiences worldwide.
-            </p>
-            <p>
-                His unique charisma, impeccable comedic timing, and undeniable talent make him one of the most beloved figures in Hollywood. Whether he's playing a grumpy dad, a mischievous villain, or a quirky character, DeVito always delivers a performance that leaves a lasting impression.
-            </p>
-            <!-- Add more text about why you love Danny DeVito -->
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to Sillys</h2>
+            <p>Your go-to site for fun and entertainment!</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card" onclick="scrollToSection('aboutUs')">
+                <h3>About Us</h3>
+                <p>Learn more about our mission and team.</p>
+            </div>
+            <div class="feature-card" onclick="openLoginForm()">
+                <h3>Login</h3>
+                <p>Access your account to see personalized content.</p>
+            </div>
+            <div class="feature-card" onclick="scrollToSection('pricing')">
+                <h3>Pricing</h3>
+                <p>Discover our subscription tiers.</p>
+            </div>
+        </section>
+
+        <section id="aboutUs" class="about-us">
+            <h2>About Sillys</h2>
+            <p>Sillys was founded in 2021 for people to buy and sell on the Sillys marketplace. Our mission is to provide a platform where individuals and businesses can connect, trade, and discover unique products and services.</p>
+            <p>At Sillys, we believe in fostering creativity and innovation. Whether you're a small business looking to reach new customers or an individual with a passion for crafting, Sillys is the place for you.</p>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <h2>Pricing</h2>
+            <div class="pricing-tier">
+                <h3>Low Tier</h3>
+                <p>10 EUR/month - Sell up to 2 products</p>
+            </div>
+            <div class="pricing-tier">
+                <h3>Mid Tier</h3>
+                <p>20 EUR/month - Sell up to 5 products</p>
+            </div>
+            <div class="pricing-tier">
+                <h3>High Tier</h3>
+                <p>50 EUR/month - Sell up to 20 products</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sillys</p>
+    </footer>
+
+    <div id="loginForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginFormContent">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="submitLogin()">Submit</button>
+            </form>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
