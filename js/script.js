@@ -69,19 +69,20 @@ function proceedToPayment() {
     openPaymentWindow();
 }
 
-function closeVouches() {
-    document.getElementById('vouchesWindow').style.display = 'none';
-}
-function openPurchaseWindow() {
-    document.getElementById('purchaseWindow').style.display = 'block';
+function decreaseAmount() {
+    const input = document.getElementById('numAccounts');
+    let value = parseInt(input.value);
+    if (value > 1) {
+        value--;
+        input.value = value;
+        updateTotalPrice();
+    }
 }
 
-function closePurchaseWindow() {
-    document.getElementById('purchaseWindow').style.display = 'none';
-}
-
-function purchaseAccounts() {
-    const numAccounts = parseInt(document.getElementById('numAccounts').value);
-    const totalPrice = numAccounts * 4; // 4 EUR per account
-    alert("You have purchased " + numAccounts + " account(s) for a total of " + totalPrice + " EUR.");
+function increaseAmount() {
+    const input = document.getElementById('numAccounts');
+    let value = parseInt(input.value);
+    value++;
+    input.value = value;
+    updateTotalPrice();
 }
