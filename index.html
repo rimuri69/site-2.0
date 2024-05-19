@@ -46,9 +46,9 @@
                 <h2>Purchase Account</h2>
                 <label for="numAccounts">Number of accounts:</label>
                 <div class="amount-selector">
-                    <button onclick="decreaseAmount()">-</button>
-                    <input type="number" id="numAccounts" name="numAccounts" min="1" value="1" oninput="updateTotalPrice()" readonly>
                     <button onclick="increaseAmount()">+</button>
+                    <input type="number" id="numAccounts" name="numAccounts" min="1" value="1" readonly>
+                    <button onclick="decreaseAmount()">-</button>
                 </div>
                 <p>Total Price: <span id="totalPrice">4 EUR</span></p>
                 <button onclick="proceedToPayment()">Purchase</button>
