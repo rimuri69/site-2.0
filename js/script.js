@@ -37,3 +37,16 @@ function openVouches() {
 function closeVouches() {
     document.getElementById('vouchesWindow').style.display = 'none';
 }
+function openPurchaseWindow() {
+    document.getElementById('purchaseWindow').style.display = 'block';
+}
+
+function closePurchaseWindow() {
+    document.getElementById('purchaseWindow').style.display = 'none';
+}
+
+function purchaseAccounts() {
+    const numAccounts = parseInt(document.getElementById('numAccounts').value);
+    const totalPrice = numAccounts * 4; // 4 EUR per account
+    alert("You have purchased " + numAccounts + " account(s) for a total of " + totalPrice + " EUR.");
+}
