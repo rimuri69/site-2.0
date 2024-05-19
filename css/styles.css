@@ -205,6 +205,7 @@ button {
 button:hover {
     background-color: #BB86FC;
 }
+/* Add this style to adjust the purchase modal */
 #purchaseWindow, #paymentWindow, #vouchesWindow {
     display: none;
     position: fixed;
@@ -237,13 +238,13 @@ button:hover {
 .amount-selector button {
     background-color: #6A0DAD;
     color: white;
-    padding: 10px;
+    padding: 5px;  /* Reduced padding */
     border: none;
     cursor: pointer;
-    width: 40px;
+    width: 30px;  /* Reduced width */
     border-radius: 5px;
     margin: 0 5px;
-    font-size: 20px;
+    font-size: 18px;  /* Reduced font size */
 }
 
 .amount-selector button:hover {
@@ -303,9 +304,6 @@ button:hover {
     float: left;
 }
 
-.vouch p {
-    margin: 0;
-}
 .vouch p {
     margin: 0;
 }
