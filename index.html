@@ -29,70 +29,67 @@
                 <h3>Vouches</h3>
                 <p>See vouches affirming the authenticity of Sillys.</p>
             </div>
-            <div class="feature-card" onclick="scrollToSection('pricing')">
-                <h3>Pricing</h3>
-                <p>Discover our subscription tiers.</p>
+            <div class="feature-card" onclick="openPurchaseWindow()">
+                <h3>Purchase Account</h3>
+                <p>Buy accounts to access exclusive content.</p>
             </div>
         </section>
-        
+
         <section id="aboutUs" class="about-us">
             <h2>About Sillys</h2>
             <p>Sillys was founded in 2021 for people to buy and sell on the Sillys marketplace.</p>
         </section>
 
-    <section id="pricing" class="pricing">
-          <h2>Pricing</h2>
-          <div class="pricing-tier">
-              <h3>Low Tier</h3>
-              <p>10 EUR/month - Sell up to 2 products</p>
+        <div id="purchaseWindow" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closePurchaseWindow()">&times;</span>
+                <h2>Purchase Account</h2>
+                <label for="numAccounts">Number of accounts:</label>
+                <input type="number" id="numAccounts" name="numAccounts" min="1" value="1">
+                <p>Total Price: <span id="totalPrice">4 EUR</span></p>
+                <button onclick="purchaseAccounts()">Purchase</button>
+            </div>
+        </div>
+
+      </div>
+      <div id="vouchesWindow" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeVouches()">&times;</span>
+          <h2>Vouches</h2>
+          <div class="vouches">
+              <div class="vouch">
+                  <img src="images/basicpfp.png" alt="Avatar">
+                  <p><strong>@Poloter:</strong> Sillys is amazing! Highly recommend!</p>
+              </div>
+              <div class="vouch">
+                  <img src="images/basicpfp.png" alt="Avatar">
+                  <p><strong>@GorillaVR:</strong> Great experience using Sillys. 10/10!</p>
+              </div>
+              <div class="vouch">
+                  <img src="images/basicpfp.png" alt="Avatar">
+                  <p><strong>@PyroGT:</strong> Sillys is trustworthy and reliable.</p>
+              </div>
+              <div class="vouch">
+                  <img src="images/basicpfp.png" alt="Avatar">
+                  <p><strong>@Angie:</strong> I've been using Sillys for years, never disappointed!</p>
+              </div>
+              <div class="vouch">
+                  <img src="images/basicpfp.png" alt="Avatar">
+                  <p><strong>@Stew13:</strong> Sillys is the best platform I've ever used!</p>
+              </div>
+              <!-- Additional fake vouches can be added here -->
           </div>
-          <div class="pricing-tier">
-              <h3>Mid Tier</h3>
-              <p>20 EUR/month - Sell up to 5 products</p>
-          </div>
-          <div class="pricing-tier">
-              <h3>High Tier</h3>
-              <p>50 EUR/month - Sell up to 20 products</p>
-          </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Sillys</p>
     </footer>
-
-    </div>
-    <div id="vouchesWindow" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeVouches()">&times;</span>
-        <h2>Vouches</h2>
-        <div class="vouches">
-            <div class="vouch">
-                <img src="images/basicpfp.png" alt="Avatar">
-                <p><strong>@Poloter:</strong> Sillys is amazing! Highly recommend!</p>
-            </div>
-            <div class="vouch">
-                <img src="images/basicpfp.png" alt="Avatar">
-                <p><strong>@GorillaVR:</strong> Great experience using Sillys. 10/10!</p>
-            </div>
-            <div class="vouch">
-                <img src="images/basicpfp.png" alt="Avatar">
-                <p><strong>@PyroGT:</strong> Sillys is trustworthy and reliable.</p>
-            </div>
-            <div class="vouch">
-                <img src="images/basicpfp.png" alt="Avatar">
-                <p><strong>@Angie:</strong> I've been using Sillys for years, never disappointed!</p>
-            </div>
-            <div class="vouch">
-                <img src="images/basicpfp.png" alt="Avatar">
-                <p><strong>@Stew13:</strong> Sillys is the best platform I've ever used!</p>
-            </div>
-            <!-- Additional fake vouches can be added here -->
-        </div>
-        </div>
-    </div>
-
-    </div>
-</div>
 
     <script src="js/script.js"></script>
 </body>
