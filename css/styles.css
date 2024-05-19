@@ -205,7 +205,7 @@ button {
 button:hover {
     background-color: #BB86FC;
 }
-#vouchesWindow {
+#purchaseWindow, #paymentWindow, #vouchesWindow {
     display: none;
     position: fixed;
     z-index: 1;
@@ -217,7 +217,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#vouchesWindow .modal-content {
+#purchaseWindow .modal-content, #paymentWindow .modal-content, #vouchesWindow .modal-content {
     background-color: #292929;
     margin: 15% auto;
     padding: 20px;
@@ -227,6 +227,34 @@ button:hover {
     border-radius: 10px;
     color: #f0f0f0;
 }
+
+#purchaseWindow input[type="number"], #paymentWindow button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+#purchaseWindow button, #paymentWindow button {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#purchaseWindow button:hover, #paymentWindow button:hover {
+    background-color: #BB86FC;
+}
+
 .vouches {
     display: flex;
     flex-wrap: wrap;
@@ -254,55 +282,3 @@ button:hover {
 .vouch p {
     margin: 0;
 }
-/* Add this style to adjust the purchase modal */
-#purchaseWindow {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-#purchaseWindow .modal-content {
-    background-color: #292929;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    color: #f0f0f0;
-}
-
-#purchaseWindow input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #444;
-    color: #f0f0f0;
-}
-
-#purchaseWindow button {
-    background-color: #6A0DAD;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-}
-
-#purchaseWindow button:hover {
-    background-color: #BB86FC;
-}
-
-/* You may adjust other styles as needed */
