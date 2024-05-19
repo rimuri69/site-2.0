@@ -1,3 +1,4 @@
+
 function openLoginForm() {
     document.getElementById('loginForm').style.display = 'block';
 }
@@ -36,24 +37,17 @@ function openVouches() {
 
 function closeVouches() {
     document.getElementById('vouchesWindow').style.display = 'none';
+}
 function openPurchaseWindow() {
     document.getElementById('purchaseWindow').style.display = 'block';
-    updateTotalPrice();
 }
 
 function closePurchaseWindow() {
     document.getElementById('purchaseWindow').style.display = 'none';
 }
 
-function updateTotalPrice() {
-    const numAccounts = parseInt(document.getElementById('numAccounts').value);
-    const totalPrice = numAccounts * 4; // 4 EUR per account
-    document.getElementById('totalPrice').innerText = totalPrice + ' EUR';
-}
-
 function purchaseAccounts() {
     const numAccounts = parseInt(document.getElementById('numAccounts').value);
     const totalPrice = numAccounts * 4; // 4 EUR per account
-    // Process the purchase
     alert("You have purchased " + numAccounts + " account(s) for a total of " + totalPrice + " EUR.");
 }
