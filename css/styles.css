@@ -228,16 +228,40 @@ button:hover {
     color: #f0f0f0;
 }
 
-#purchaseWindow input[type="number"], #paymentWindow button {
-    width: 100%;
+.amount-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-selector button {
+    background-color: #6A0DAD;
+    color: white;
     padding: 10px;
-    margin: 5px 0 20px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.amount-selector button:hover {
+    background-color: #BB86FC;
+}
+
+.amount-selector input[type="number"] {
+    width: 60px;
+    padding: 10px;
+    margin: 5px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 5px;
     background-color: #444;
     color: #f0f0f0;
+    text-align: center;
+    font-size: 18px;
 }
 
 #purchaseWindow button, #paymentWindow button {
