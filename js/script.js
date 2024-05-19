@@ -34,6 +34,40 @@ function scrollToSection(sectionId) {
 function openVouches() {
     document.getElementById('vouchesWindow').style.display = 'block';
 }
+function openPurchaseWindow() {
+    document.getElementById('purchaseWindow').style.display = 'block';
+}
+
+function closePurchaseWindow() {
+    document.getElementById('purchaseWindow').style.display = 'none';
+}
+
+function openPaymentWindow() {
+    document.getElementById('paymentWindow').style.display = 'block';
+}
+
+function closePaymentWindow() {
+    document.getElementById('paymentWindow').style.display = 'none';
+}
+
+function openVouches() {
+    document.getElementById('vouchesWindow').style.display = 'block';
+}
+
+function closeVouches() {
+    document.getElementById('vouchesWindow').style.display = 'none';
+}
+
+function updateTotalPrice() {
+    const numAccounts = parseInt(document.getElementById('numAccounts').value);
+    const totalPrice = numAccounts * 4; // 4 EUR per account
+    document.getElementById('totalPrice').innerText = totalPrice + " EUR";
+}
+
+function proceedToPayment() {
+    closePurchaseWindow();
+    openPaymentWindow();
+}
 
 function closeVouches() {
     document.getElementById('vouchesWindow').style.display = 'none';
