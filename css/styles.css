@@ -205,7 +205,6 @@ button {
 button:hover {
     background-color: #BB86FC;
 }
-/* Add this style to adjust the purchase modal */
 #purchaseWindow, #paymentWindow, #vouchesWindow {
     display: none;
     position: fixed;
