@@ -206,7 +206,8 @@ button {
 button:hover {
     background-color: #BB86FC;
 }
-#purchaseWindow, #paymentWindow, #vouchesWindow {
+/* Add this style to adjust the purchase modal */
+#purchaseWindow, #paymentWindow, #vouchesWindow, #snakeGameWindow {
     display: none;
     position: fixed;
     z-index: 1;
@@ -218,7 +219,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#purchaseWindow .modal-content, #paymentWindow .modal-content, #vouchesWindow .modal-content {
+#purchaseWindow .modal-content, #paymentWindow .modal-content, #vouchesWindow .modal-content, #snakeGameWindow .modal-content {
     background-color: #292929;
     margin: 15% auto;
     padding: 20px;
@@ -306,4 +307,27 @@ button:hover {
 
 .vouch p {
     margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #292929;
+    color: #f0f0f0;
+    position: relative;
+}
+
+footer .open-snake-game {
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .open-snake-game:hover {
+    background-color: #BB86FC;
 }
