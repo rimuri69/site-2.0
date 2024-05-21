@@ -8,6 +8,7 @@ body {
     background-color: #1c1c1c;
     color: #f0f0f0;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
