@@ -58,6 +58,14 @@ function closeVouches() {
     document.getElementById('vouchesWindow').style.display = 'none';
 }
 
+function openSnakeGameWindow() {
+    document.getElementById('snakeGameWindow').style.display = 'block';
+}
+
+function closeSnakeGameWindow() {
+    document.getElementById('snakeGameWindow').style.display = 'none';
+}
+
 function updateTotalPrice() {
     const numAccounts = parseInt(document.getElementById('numAccounts').value);
     const totalPrice = numAccounts * 4; // 4 EUR per account
